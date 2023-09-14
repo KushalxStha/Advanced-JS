@@ -1,0 +1,25 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Advance JS</title>
+  </head>
+  <body>
+    <h2>Template String</h2>
+    <script>
+      let firstName = "Kushal";
+      let lastName = "Shrestha";
+
+      // document.write("Hello" + user");
+      function fullName(firstName, lastName) {
+        return `${firstName} ${lastName}`;
+      }
+
+      let greet = `Hello ${fullName(firstName, lastName)}.`;
+
+      document.write(greet);
+      console.log(greet);
+    </script>
+  </body>
+</html>
