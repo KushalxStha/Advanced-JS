@@ -1,0 +1,23 @@
+  </head>
+  <body>
+    <h2>Rest Operator</h2>
+    <script>
+      // ...arg -> this is Rest Operator.
+      // It should always be at last.
+      function sum(name, course, ...args) {
+        console.log(arguments);
+
+        document.write(`Hello ${name} of ${course}! <br>`);
+
+        let sum = 0;
+        for (let i in args) {
+          sum += args[i];
+        }
+
+        document.write(sum);
+      }
+      sum("Kushal", "BIT", 20, 30, 40);
+      // sum(78, 89);
+    </script>
+  </body>
+</html>
