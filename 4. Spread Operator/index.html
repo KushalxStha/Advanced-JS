@@ -8,21 +8,24 @@
   <body>
     <h2>Rest Operator</h2>
     <script>
-      function sum(name, course, ...args) {
-        console.log(arguments);
+      // let arr1 = [10, 20, 30];
+      // let arr2 = [40, 50];
+      // console.log([5, ...arr1, ...arr2]);
 
-        document.write(`Hello ${name} of ${course}! <br>`);
-        let sum = 0;
-        for (let i in args) {
-          sum += args[i];
-        }
-        document.write(sum);
-      }
+      let obj1 = {
+        name: "Kushal",
+        course: "BIT"
+      };
 
-      let arr = [10, 20, 30];
-      sum("Kushal", "BIT", ...arr);
-      // ...arr -> this is Spread Operator.
-      // It is used while calling function.
+      let obj2 = {
+        age: 21
+      };
+
+      let obj3 = { ...obj1, ...obj2 };
+      console.log(obj3);
+      
+      // Spread Operator is used while calling function.
+      // It does cloning.
     </script>
   </body>
 </html>
