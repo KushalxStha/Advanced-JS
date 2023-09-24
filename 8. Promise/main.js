@@ -1,11 +1,24 @@
-let complete = true;
+function prom(complete) {
+  return new Promise(function(resolve, reject) {
+    console.log("Fetching Data... Please wait.")
+    setTimeout(()=>{
+      if (complete) {
+        resolve("It is successfull.");
+      } 
+      else {
+        reject("It failed.");
+      }
+    },1500)
+  })
+}
 
-let prom = new Promise(function (resolve, reject) {
-  if (complete) {
-    resolve("It is successfull.");
-  } else {
-    reject("It failed.");
-  }
-});
+let a=function onCheck(output){
+  console.log(output);
+}
 
-console.log(prom);
+prom(true).then(a).catch(a);
+// Method Chaining
+
+setTimeout(()=>{
+  prom(false).then(a).catch(a);
+},2500)
